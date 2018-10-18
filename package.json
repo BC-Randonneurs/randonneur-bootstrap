@@ -1,0 +1,16 @@
+{
+  "name": "randonneur-bootstrap",
+  "version": "0.1",
+  "description": "Bootstrap themeing to be used by randonneur websites",
+  "main": "none.js",
+  "repository": "git@bitbucket.org:bcrandonneurs/randonneur-bootstrap.git",
+  "author": "Étienne H <rfc2324c418@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "bootstrap": "4.1.3",
+    "sass": "^1.14.2"
+  },
+  "scripts": {
+    "build-project":"sass theme.scss build/theme.css"
+  }
+}
