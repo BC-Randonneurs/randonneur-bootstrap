@@ -1,3 +1,6 @@
+# ignore build dir
+build/*
+
 # Ignore ruby files
 .ruby-version
 .bundle
