@@ -12,6 +12,6 @@
   },
   "scripts": {
     "build-project": "sass theme.scss build/theme.css",
-    "build-db": "sass theme.scss build/theme.css && cp build/theme.css ../bcrdata/bcrdatabase/site_static/css/bootstrap.css"
+    "build-db": "sass theme.scss build/bootstrap.css && sass randocan_theme.scss build/randocan_bootstrap.css && cp build/bootstrap.css build/randocan_bootstrap.css ../bcrdata/bcrdatabase/site_static/css/"
   }
 }

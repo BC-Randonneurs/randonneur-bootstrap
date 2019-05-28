@@ -1,0 +1,13 @@
+$rando-red: #b61e2a;
+$leaf-red: #c65148;
+
+$theme-colors: (
+  dark: $rando-red,
+  light: $leaf-red,
+  primary: $rando-red
+);
+
+$link-color: $leaf-red !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+@import "./node_modules/bootstrap/scss/bootstrap";
