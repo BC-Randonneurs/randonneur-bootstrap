@@ -7,11 +7,21 @@
   "author": "Étienne H <rfc2324c418@gmail.com>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "bootstrap": "4.1.3",
+    "autoprefixer": "^9.6.0",
+    "bootstrap": "4.3.1",
+    "clean-css-cli": "^4.3.0",
+    "postcss-cli": "^6.1.2",
     "sass": "^1.20.1"
   },
   "scripts": {
-    "build-project": "sass theme.scss build/theme.css",
-    "build-db": "sass theme.scss build/bootstrap.css && sass randocan_theme.scss build/randocan_bootstrap.css && cp build/bootstrap.css build/randocan_bootstrap.css ../bcrdata/bcrdatabase/site_static/css/"
+    "css-theme": "sass theme.scss build/theme.css",
+    "css-rando-can": "sass randocan_theme.scss build/randocan_bootstrap.css",
+    "css-database": "yarn css-theme && yarn css-rando-can",
+    "post-css": "postcss --replace \"build/*.css\" \"!build/*.min.css\"",
+    "minify-theme": "cleancss --level 1 --output build/theme.min.css build/theme.css",
+    "minify-rando-can": "cleancss --level 1 --output build/randocan_bootstrap.min.css build/randocan_bootstrap.css",
+    "minify-database": "yarn minify-theme && yarn minify-rando-can",
+    "copy-to-db": "mv build/theme.min.css ../bcrdata/bcrdatabase/site_static/css/bootstrap.css && mv build/randocan_bootstrap.min.css ../bcrdata/bcrdatabase/site_static/css/randocan_bootstrap.css",
+    "build-db": "yarn css-database && yarn post-css && yarn minify-database && yarn copy-to-db"
   }
 }
