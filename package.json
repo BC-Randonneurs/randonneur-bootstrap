@@ -22,6 +22,8 @@
     "minify-rando-can": "cleancss --level 1 --output build/randocan_bootstrap.min.css build/randocan_bootstrap.css",
     "minify-database": "yarn minify-theme && yarn minify-rando-can",
     "copy-to-db": "mv build/theme.min.css ../bcrdata/bcrdatabase/site_static/css/bootstrap.css && mv build/randocan_bootstrap.min.css ../bcrdata/bcrdatabase/site_static/css/randocan_bootstrap.css",
-    "build-db": "yarn css-database && yarn post-css && yarn minify-database && yarn copy-to-db"
+    "copy-to-pony": "mv build/theme.min.css ../randopony-tetra/randopony/static/css/bootstrap.css",
+    "build-db": "yarn css-database && yarn post-css && yarn minify-database && yarn copy-to-db",
+    "build-pony": "yarn css-theme && yarn post-css && yarn minify-theme && yarn copy-to-pony"
   }
 }

@@ -18,6 +18,9 @@ your-rando-root/
 │   └── bcrdatabase/
 └── randonneur-bootstrap/
 |
+└── randopony-tetra/
+|   └── randopony/
+|
 ...
 └── randonneur-wp/
 ```
@@ -25,5 +28,9 @@ your-rando-root/
 You can run:
 
 `yarn build-db`
+
+or
+
+`yarn build-pony`
 
 to copy the files to the right directory
