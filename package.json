@@ -1,10 +1,9 @@
 {
   "name": "randonneur-bootstrap",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Bootstrap themeing to be used by randonneur websites",
-  "main": "none.js",
-  "repository": "git@bitbucket.org:bcrandonneurs/randonneur-bootstrap.git",
-  "author": "Étienne H <rfc2324c418@gmail.com>",
+  "repository": "git@github.com:BC-Randonneurs/randonneur-bootstrap.git",
+  "author": "Étienne H <et@hossack.me>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "autoprefixer": "^9.6.0",
