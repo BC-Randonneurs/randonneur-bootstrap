@@ -6,16 +6,17 @@
   "author": "Étienne H <et@hossack.me>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "autoprefixer": "^9.6.0",
-    "bootstrap": "4.3.1",
+    "autoprefixer": "^10.4.1",
+    "bootstrap": "4.6.1",
     "clean-css-cli": "^5.5.0",
-    "postcss-cli": "^6.1.2",
-    "sass": "^1.20.1"
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.45.2"
   },
   "scripts": {
     "clean": "rm -rf build/*",
     "process-themes": "sass themes:build",
-    "post-css": "postcss --replace \"build/*.css\" \"!build/*.min.css\"",
+    "post-css": "postcss --replace build/*.css",
     "minify-themes": "cleancss --batch -O1 --batch-suffix '_bootstrap' build/*.css",
     "copy-themes": "mv build/*_bootstrap.css ../randonneur-database/bcrdatabase/site_static/css/",
     "build": "yarn clean && yarn process-themes && yarn post-css && yarn minify-themes",
