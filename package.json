@@ -8,21 +8,17 @@
   "dependencies": {
     "autoprefixer": "^9.6.0",
     "bootstrap": "4.3.1",
-    "clean-css-cli": "^4.3.0",
+    "clean-css-cli": "^5.5.0",
     "postcss-cli": "^6.1.2",
     "sass": "^1.20.1"
   },
   "scripts": {
-    "css-theme": "sass theme.scss build/theme.css",
-    "css-rando-can": "sass randocan_theme.scss build/randocan_bootstrap.css",
-    "css-database": "yarn css-theme && yarn css-rando-can",
+    "clean": "rm -rf build/*",
+    "process-themes": "sass themes:build",
     "post-css": "postcss --replace \"build/*.css\" \"!build/*.min.css\"",
-    "minify-theme": "cleancss --level 1 --output build/theme.min.css build/theme.css",
-    "minify-rando-can": "cleancss --level 1 --output build/randocan_bootstrap.min.css build/randocan_bootstrap.css",
-    "minify-database": "yarn minify-theme && yarn minify-rando-can",
-    "copy-to-db": "mv build/theme.min.css ../bcrdata/bcrdatabase/site_static/css/bootstrap.css && mv build/randocan_bootstrap.min.css ../bcrdata/bcrdatabase/site_static/css/randocan_bootstrap.css",
-    "copy-to-pony": "mv build/theme.min.css ../randopony-tetra/randopony/static/css/bootstrap.css",
-    "build-db": "yarn css-database && yarn post-css && yarn minify-database && yarn copy-to-db",
-    "build-pony": "yarn css-theme && yarn post-css && yarn minify-theme && yarn copy-to-pony"
+    "minify-themes": "cleancss --batch -O1 --batch-suffix '_bootstrap' build/*.css",
+    "copy-themes": "mv build/*_bootstrap.css ../randonneur-database/bcrdatabase/site_static/css/",
+    "build": "yarn clean && yarn process-themes && yarn post-css && yarn minify-themes",
+    "build-and-copy": "yarn build && yarn copy-themes"
   }
 }

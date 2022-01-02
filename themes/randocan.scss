@@ -10,4 +10,4 @@ $theme-colors: (
 $link-color: $leaf-red !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
-@import "./node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";

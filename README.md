@@ -4,33 +4,24 @@
 
 How to customize:
 
-# `yarn` to install
-
-# Make your edits
-
-# `yarn build-project`
+1. `yarn` to install
+2. Make your edits
+3. `yarn build` to do processing
 
 If you have your directory structure as follows:
 
 ```
 your-rando-root/
-├── bcrdata/
+├── randonneur-database/
 │   └── bcrdatabase/
 └── randonneur-bootstrap/
-|
-└── randopony-tetra/
-|   └── randopony/
-|
 ...
 └── randonneur-wp/
 ```
 
 You can run:
-
-`yarn build-db`
-
-or
-
-`yarn build-pony`
+```
+yarn build-and-copy
+```
 
 to copy the files to the right directory
