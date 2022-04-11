@@ -1,23 +1,15 @@
-/* SCSS HEX from imagecolorpicker.com */
-$botticelli: #cad6e3;
-$matisse: #2166a4;
-$bahama-blue: #04649c;
-$hippie-blue: #6089b3;
-$congress-blue: #044e97;
-$ship-cove: #7c9cbc;
-$nepal: #849cbc;
-$resolution-blue: #042c8d;
-$matisse: #1c649c;
+$qc-blue: #06408b;
+$qc-darkblue: #0a1a5c;
+$qc-yellow: #e5ca00;
+$qc-red: #ef4042;
+$qc-green: #c3dfa4;
+$qc-black: #271e00;
 
-$qc-blue: #00619e;
+$theme-colors: (dark: $qc-darkblue,
+  light: $qc-blue,
+  primary: $qc-darkblue);
 
-$theme-colors: (
-  dark: $qc-blue,
-  light: $hippie-blue,
-  primary: $qc-blue
-);
-
-$link-color: $hippie-blue !default;
-$link-hover-color: darken($link-color, 15%) !default;
+$link-color: $qc-blue !default;
+$link-hover-color: $qc-yellow !default;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
